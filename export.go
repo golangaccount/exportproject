@@ -10,6 +10,9 @@ import (
 )
 
 //ExportPackage 导出package code
+//pkgs:需要进行导出的pkg
+//dest:导出的文件夹地址
+//filter:导出过滤
 func ExportPackage(pkgs []string, dest string, filter func(pkg *load.Package) bool) error {
 	disposepkg := map[string]interface{}{}
 	pkgsinfo := load.Packages(pkgs)
